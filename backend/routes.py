@@ -68,7 +68,7 @@ def create_picture():
             if new_pic.get("id") == pic["id"]:
                 return {"Message": f"picture with id {pic['id']} already present"}, 302
         data.append(new_pic)
-        return {"message": "Picture added successifully"}, 201
+        return new_pic, 201
     return {"message": "Something went wrong"}, 500
 
 
